@@ -1,73 +1,60 @@
 /**
  * Created by Ritika on 01-02-2017.
  */
-var mapRashmiApp = angular.module('mapRashmiApp', ['ngRoute', 'ngAnimate']);
+var animateApp = angular.module('animateApp', ['ngRoute', 'ngAnimate']);
 
-mapRashmiApp.config(function($routeProvider) {
+animateApp.config(function($routeProvider) {
+    "use strict";
     $routeProvider
         .when('/', {
-            templateUrl: 'welcome.html',
-            controller: 'welcomeController'
+            templateUrl: 'firstpage.html',
+            controller: 'firstpageController'
+        })
+        .when('/Log In', {
+            templateUrl: 'login.html',
+            controller: 'loginController'
         })
         .when('/register', {
             templateUrl: 'register.html',
             controller: 'registerController'
         })
-        .when('/login', {
-            templateUrl: 'login.html',
-            controller: 'loginController'
+        .when('/directions', {
+            templateUrl: 'directions.html',
+            controller: 'dirController'
         })
-        .when('/home', {
-            templateUrl: 'home.html',
-            controller: 'mainController'
+        .when('/weather', {
+            templateUrl: 'weather.html',
+            controller: 'weatherController'
         })
 
         .otherwise({ redirectTo: '/login' });
 
-
 });
 
-mapRashmiApp.controller('mainController', function($scope) {
-    $scope.pageClass = 'home';
+animateApp.controller('firstpageController', function($scope) {
+    "use strict";
+    $scope.pageClass = 'firstpage';
 });
 
-//mapRashmiApp.controller('loginController', function($scope,$http) {
-
-mapRashmiApp.controller('loginController',function($scope,$http) {
+animateApp.controller('loginController',function($scope) {
+    "use strict";
     $scope.pageClass = 'login';
-
-    $scope.login=function (userName,pwd) {
-        //localStorage.setItem("name" , user);
-        //$scope.logins.push( localStorage.getItem("name") + " was logged in.");
-        if(userName=="rashmitripathi18@gmail.com" && pwd=="1234"){
-            window.location.replace("home.html");
-        }
-        else {
-            window.alert("Login Failed");
-        }
-        // $http.get("home.html")
-        //	.then(function(response) {
-        //		console.log(" Getting HTMl");
-        //	$scope.userName = response.userName;
-        //})
-
-//		$http.get("home.html")
-//			.success(function(response) {
-        //		console.log(" Getting HTMl");
-        //		$scope.userName = response.userName;
-        //	});
-
-    }
 });
 
-mapRashmiApp.controller('registerController', function($scope) {
+animateApp.controller('registerController', function($scope) {
+    "use strict";
     $scope.pageClass = 'register';
 });
 
-mapRashmiApp.controller('welcomeController', function($scope) {
-    $scope.pageClass = 'welcome';
+animateApp.controller('dirController', function($scope) {
+    "use strict";
+    $scope.pageClass = 'directions';
 });
 
+animateApp.controller('weatherController', function($scope) {
+    "use strict";
+    $scope.pageClass = 'weather';
+});
 
 /*welcome  page js*/
 
@@ -100,12 +87,10 @@ mapRashmiApp.controller('welcomeController', function($scope) {
             top: 50
         }
     })
-
 })(jQuery); // End of use strict
-
 //register page js
 
-$(function () {
+(function ($) {
     $('.button-checkbox').each(function () {
 
         // Settings
@@ -163,7 +148,7 @@ $(function () {
             updateDisplay();
 
             // Inject the icon if applicable
-            if ($button.find('.state-icon').length == 0) {
+            if ($button.find('.state-icon').length === 0) {
                 $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i>');
             }
         }
