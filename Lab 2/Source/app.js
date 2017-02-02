@@ -24,7 +24,7 @@ animateApp.config(function($routeProvider) {
         })
         .when('/weather', {
             templateUrl: 'weather.html',
-            controller: 'weatherController'
+            controller: 'weatherctrl'
         })
 
         .otherwise({ redirectTo: '/login' });
