@@ -10,7 +10,7 @@ animateApp.config(function($routeProvider) {
             templateUrl: 'firstpage.html',
             controller: 'firstpageController'
         })
-        .when('/Log In', {
+        .when('/login', {
             templateUrl: 'login.html',
             controller: 'loginController'
         })
