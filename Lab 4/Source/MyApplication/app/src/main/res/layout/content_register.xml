@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"><![CDATA[
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    ]]>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/txt_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:id="@+id/txt_uname"
+        android:hint="Enter username/email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_marginTop="36dp"
+        android:id="@+id/txt_Pwd"
+        android:hint="Enter password"
+        android:layout_below="@+id/txt_uname"
+        android:layout_alignStart="@+id/txt_uname" />
+
+    <Button
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_Pwd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:id="@+id/btn_register" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="58dp"
+        android:id="@+id/txt_name"
+        android:hint="Enter name"
+        android:layout_below="@+id/lbl_Header"
+        android:layout_alignStart="@+id/txt_uname" />
+
+    <TextView
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_Header"
+        android:layout_marginTop="73dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btn_register" />
+</RelativeLayout>

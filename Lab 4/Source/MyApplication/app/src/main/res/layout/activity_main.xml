@@ -1,0 +1,37 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_toLeftOf="@+id/txtText"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/txtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Begin Speak now!!"
+        android:id="@+id/textView"
+        android:layout_weight="1" />
+
+    <ImageButton
+        android:id="@+id/btnSpeak"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Speak"
+        android:src="@android:drawable/ic_btn_speak_now"/>
+
+</LinearLayout>
