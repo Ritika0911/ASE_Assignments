@@ -16,3 +16,5 @@ Lab 7 - https://github.com/Ritika0911/ASE_Assignments/wiki/Lab-Assignment-7
 Lab 8 - https://github.com/Ritika0911/ASE_Assignments/wiki/Lab-Assignment-8
 
 Lab 9 - https://github.com/Ritika0911/ASE_Assignments/wiki/Lab-Assignment-9
+
+Lab 10 - https://github.com/Ritika0911/ASE_Assignments/wiki/Lab-Assignment-10
